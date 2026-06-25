@@ -1,0 +1,18 @@
+$fond: linear-gradient(125deg, #05020f, #150530, #3b0764, #7c22bb, #c026d3);
+$cards: #1a0a2e;
+$accents-v1: #e879f9;
+$accents-v2: #7c22bb;
+$textes-v1: #ffffff;
+$textes-v2: #c9d1d9;
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: $fond;
+    height: 100dvb;
+}
+.title{
+    font-family: 'JetBrains mono';
+}
