@@ -7,13 +7,23 @@ import "./header.scss"
 function Header () {
 
     const [menuModalIsOpen, setMenuModalIsOpen] = useState(false)
+    const [iconAnimation,setIconAnimation] = useState("")
 
     return(
         <header className = "header">
-            <MenuModal isOpen = {menuModalIsOpen} onClose = {() => setMenuModalIsOpen(false)}/>
-            <Icon onClick = {() => setMenuModalIsOpen(true)} className = "header__icon"/>
+            <MenuModal isOpen = {menuModalIsOpen} onClose = {() => {setMenuModalIsOpen(false); setIconAnimation("land")}}/>
+            <Icon isOpen={menuModalIsOpen} onClick={() => {
+                if (menuModalIsOpen) {
+                    setIconAnimation("land")
+                    setMenuModalIsOpen(false)
+                } else {
+                    setIconAnimation("jump")
+                    setMenuModalIsOpen(true)
+                }
+            }} 
+            className = "header__icon" animation = {iconAnimation}/>
             <nav className = "header__nav">
-                <Nav text = "Accueil" redirection = "/" className = "header__nav--link"/>
+                <Nav text = "Accueil" redirection = "/#accueil" className = "header__nav--link"/>
                 <Nav text = "Compétences" redirection = "/competences" className = "header__nav--link"/>
                 <Nav text = "Projets" redirection = "/projets" className = "header__nav--link"/>
                 <Nav text = "Á propos" redirection = "/#a-propos" className = "header__nav--link"/> 

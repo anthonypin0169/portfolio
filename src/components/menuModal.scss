@@ -1,15 +1,23 @@
 @use '../index' as *;
 
 .overlay{
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+.overlay.hide{
+    opacity: 1;
+    pointer-events: auto;
 }
 .header{
+    position: relative;
     &__menuModal{
         position: relative;
         z-index: 1;
@@ -19,6 +27,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
         &--group-1{
             display: flex;
             flex-direction: column;
@@ -33,12 +43,45 @@
         }
     }
 }
+.header__menuModal.open{
+    transform: translateX(0);
+    transition-delay: 200ms;
+}
 .link{
     text-decoration: none;
     color: $textes-v1;
     font-size: 22px;
     margin: 0;
+    opacity: 0;
     &:hover{
         color: $textes-v2;
+    }
+}
+.link-grp1.slide{
+    animation: sliderLink 250ms ease forwards;
+
+    @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+            animation-delay: 250ms + $i * 100ms;
+        }
+    }
+}
+.link-grp2.slide-grp2{
+    animation: sliderLink 250ms ease forwards;
+
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            animation-delay: 400ms + $i * 150ms;
+        }
+    }
+}
+@keyframes sliderLink{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
     }
 }

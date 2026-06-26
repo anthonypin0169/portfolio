@@ -1,0 +1,21 @@
+@use '../index' as *;
+
+.header__icon--stick{
+    width: 25px;
+    height: 4px;
+    border-radius: 1px;
+    background: $cards;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+}
+.header__icon--stick.stick-1{
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.header__icon--stick.stick-2{
+    opacity: 0;
+}
+
+.header__icon--stick.stick-3{
+    transform: translateY(-9.5px) rotate(-45deg);
+}
