@@ -1,1 +1,12 @@
-/*# sourceMappingURL=index.css.map */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(125deg, #05020f, #150530, #3b0764, #7c22bb, #c026d3);
+  height: 100dvb;
+}
+
+.title {
+  font-family: "JetBrains mono";
+}/*# sourceMappingURL=index.css.map */

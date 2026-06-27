@@ -1,0 +1,12 @@
+@use '../index' as *;
+
+#tsParticles canvas {
+    filter: drop-shadow(1px 1px 10px $accents-v2)drop-shadow(1px 1px 5px $accents-v2)drop-shadow(1px 1px 10px $accents-v2);
+}
+#tsParticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

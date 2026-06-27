@@ -1,0 +1,37 @@
+@use '../index' as *;
+
+.banner{
+    height: 35dvh;
+    padding-top: 30px;
+    position: relative;
+    box-shadow: 0 3px 10px #1a0a2e70;
+    &__h2{
+        margin-top: 0;
+    }
+    &__h1{
+
+    }
+    &__h3{
+
+    }
+}
+.title{
+    margin-left: 30px;
+    color: $textes-v1;
+    text-shadow: 3px 3px 2px $cards;
+}
+
+.introduction{
+    &__text{
+        color: $textes-v1;
+    }
+}
+.text-1{
+
+}
+.text-2{
+
+}
+.text-3{
+
+}
