@@ -1,6 +1,6 @@
 import Particle from "../components/particles.jsx"
 import Card from "../components/cards.jsx"
-import Carrousel from "./carrousel.jsx"
+import Carrousel from "../components/carrousel.jsx"
 import "./home.scss"
 function Home () {
     return(
@@ -18,6 +18,7 @@ function Home () {
             </section>
             <section className="school-projects">
                 <Carrousel />
+                <h3>Ces projets reflètent ma progression et ma capacité à livrer des interfaces fonctionnelles, structurées et pensées pour l'utilisateur.</h3>
             </section>
             <section className="personnal-works"></section>
         </main>
