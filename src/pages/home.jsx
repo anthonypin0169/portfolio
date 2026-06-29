@@ -1,5 +1,6 @@
 import Particle from "../components/particles.jsx"
 import Card from "../components/cards.jsx"
+import Carrousel from "./carrousel.jsx"
 import "./home.scss"
 function Home () {
     return(
@@ -16,7 +17,7 @@ function Home () {
                 <Card className="introduction__text" contentClass="introduction__content" text = "Je cherche une équipe avec qui construire des choses qui comptent." />
             </section>
             <section className="school-projects">
-                <Card className="school-projects__card" contentClass="school-projects__content"/>
+                <Carrousel />
             </section>
             <section className="personnal-works"></section>
         </main>
