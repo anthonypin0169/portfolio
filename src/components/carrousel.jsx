@@ -36,16 +36,19 @@ function Carrousel () {
             <article onClick={() => setModalIsOpen(true)} className="carrousel__card">
                 <h2 className="carrousel__card--title">{schoolProjects[carrouselState].title}</h2>
                 <img src={schoolProjects[carrouselState].picture[0]} alt={schoolProjects[carrouselState].alt} className="carrousel__card--img" />
-                <button onClick={handlePrev} className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                <button onClick={handleNext} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
+                <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
             </article>
 
 
             <div className={`overlay ${modalIsOpen ? 'hide' : ''}`} onClick={() => setModalIsOpen(false)}>
                 <div className={`carrousel__modal ${modalIsOpen ? "open" : "" }`} 
-                    onClick={() => setModalIsOpen(true)}
+                    onClick={(e) => e.stopPropagation()}
                 >
-                    <button onClick={() => setModalIsOpen(false)} className="carrousel__modal--close-btn"></button>
+                    <button onClick={() => setModalIsOpen(false)} className="carrousel__modal--close-btn">
+                        <div className="close-btn-stick stick1"></div>
+                        <div className="close-btn-stick stick2"></div>
+                    </button>
 
                     <h2 className="carrousel__modal--title">{schoolProjects[carrouselState].title}</h2>
                     <p className="carrousel__modal--context">{schoolProjects[carrouselState].context}</p>
@@ -54,15 +57,16 @@ function Carrousel () {
                     <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
                     <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
 
-                    <p className="carrousel__modal--logo-text">Ce projet m'a permis de travailler avec :</p>
-                    {schoolProjects[carrouselState].logoTech.map((logo,index) => (
-                        <img key={index} src={logo} alt={schoolProjects[carrouselState].altLogoTech[index]} className="carrousel__modal--logo"/>
-                    ))} 
+                    <div className="carrousel__modal--logo">
+                        <p className="logo-text">Ce projet m'a permis de travailler avec :</p>
+                        {schoolProjects[carrouselState].logoTech.map((logo,index) => (
+                            <img key={index} src={logo} alt={schoolProjects[carrouselState].altLogoTech[index]} className="logo"/>
+                        ))} 
+                    </div>
                 </div>
             </div>
         </div>
     )
-
 }
 
 export default Carrousel
