@@ -19,8 +19,13 @@ function Projects () {
                 <div className={`overlay ${modalIsOpen ? 'hide' : ''}`} onClick={() => setModalIsOpen(false)}>
                     <div className={`personnal-works__modal ${modalIsOpen ? "open" : "" }`} onClick={(e) => e.stopPropagation()}>
 
+                        <button onClick={() => setModalIsOpen(false)} className="personnal-works__modal--close-btn">
+                            <div className="close-btn-stick stick1"></div>
+                            <div className="close-btn-stick stick2"></div>
+                        </button>
+
                         <div className="personnal-works__modal--text">
-                            <h2>{currentProject?.title}</h2>
+                            <h2 className="personnal-works__modal--title">{currentProject?.title}</h2>
                             <h3>Contexte du projet :</h3>
                             <p>{currentProject?.context}</p>
                             <p>{currentProject?.objectiv}</p>
