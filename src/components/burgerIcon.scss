@@ -1,21 +1,30 @@
 @use '../index' as *;
 
 .header__icon--stick{
+    position: absolute;
+    left: 50%;
     width: 25px;
     height: 4px;
     border-radius: 1px;
     background: $cards;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-
+    transform: translateX(-50%);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, top 0.2s ease-in-out;
 }
+
+.header__icon--stick:nth-child(1){ top: 4px; }
+.header__icon--stick:nth-child(2){ top: 50%; margin-top: -2px; }
+.header__icon--stick:nth-child(3){ top: calc(100% - 25%); }
+
 .header__icon--stick.stick-1{
-    transform: translateY(9.5px) rotate(45deg);
+    top: 50%;
+    margin-top: -2px;
+    transform: translateX(-50%) rotate(45deg);
 }
-
 .header__icon--stick.stick-2{
     opacity: 0;
 }
-
 .header__icon--stick.stick-3{
-    transform: translateY(-9.5px) rotate(-45deg);
+    top: 50%;
+    margin-top: -2px;
+    transform: translateX(-50%) rotate(-45deg);
 }

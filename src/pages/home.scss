@@ -40,7 +40,11 @@
         padding: 10px;
         border-radius: 8px;
     }
+    &__img{
+        display: none;
+    }
 }
+
 .school-projects{
     display: flex;
     flex-direction: column;
@@ -56,5 +60,11 @@
         background: $cards;
         padding: 8px;
         border-radius: 8px;
+    }
+    &__h2{
+        margin-bottom: 30px;
+    }
+    &__h3{
+        margin: 30px 15px;
     }
 }

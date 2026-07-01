@@ -3,8 +3,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: linear-gradient(125deg, #05020f, #150530, #3b0764, #7c22bb, #c026d3);
+  background: linear-gradient(125deg, #05020f, #150530, #3b0764, #7c22bb, #a226d3);
+  background-repeat: no-repeat;
   color: #ffffff;
+  min-height: 780px;
 }
 
 body h1 {

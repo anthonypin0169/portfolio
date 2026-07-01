@@ -58,11 +58,13 @@ function Carrousel () {
                     <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
 
                     <div className="carrousel__modal--logo">
-                        <p className="logo-text">Ce projet m'a permis de travailler avec :</p>
+                        <h3 className="logo-text">Ce projet m'a permis de travailler avec :</h3>
                         {schoolProjects[carrouselState].logoTech.map((logo,index) => (
                             <img key={index} src={logo} alt={schoolProjects[carrouselState].altLogoTech[index]} className="logo"/>
                         ))} 
                     </div>
+                    <h3 className="carrousel__modal--p">Pour en savoir plus sur le projet..</h3>
+                    <p className="carrousel__modal--p">{schoolProjects[carrouselState].repository}</p>
                 </div>
             </div>
         </div>
