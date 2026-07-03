@@ -1,0 +1,79 @@
+@use '../index' as *;
+
+.title{
+    margin: 30px 20px;
+}
+
+.css-anim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    &__h2{
+        
+    }
+    &__card-group{
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+        width: 100%;
+    }
+}
+
+
+.card{
+    width: 65px;
+    height: 95px;
+    padding: 5px;
+    border-radius: 7px;
+    background: $border-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    &.flipped{ 
+        transform: rotateY(180deg); 
+    }
+    &__front{
+        width: 90%;
+        height: 93%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid $cards;
+        border-radius: 7px;
+        backface-visibility: hidden;
+        position: absolute;
+        transform: rotateY(180deg);
+        &--content{
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, $textes-v1 0%, $cards 40%, #fff 50%, $cards 60%, $textes-v1 100%);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__back{
+        width: 90%;
+        height: 93%;
+        border-radius: 7px;
+        backface-visibility: hidden;
+        position: absolute;
+        background: $cards;
+        &--content{
+            
+        }
+    }
+}
+.card__front--content.shine {
+    animation: shine 1.2s ease forwards;
+}
+
+@keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
