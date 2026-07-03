@@ -8,6 +8,7 @@ function Careers () {
         setRotate(rotate.map((val, i) => i === index ? !val : val))
     }
 
+    const [width, setWidth] = useState(200)
 
     return(
         <main className="main">
@@ -49,11 +50,12 @@ function Careers () {
 
             <section className="css-responsive">
                 <h2 className="css-responsive__h2">Responsive CSS</h2>
-                <div className="css-responsive__demo-container">
+                <div className="css-responsive__demo-container" style={{width: `${width}px`}}>
                     {Array.from({length: 20}, (_, i) => (
                         <div key={i} className={`bloc bloc-${i + 1}`}></div>
                     ))}
                 </div>
+                <input className="css-responsive__input" type="range" min="100" max="300" value={width} onChange={(e) => setWidth(e.target.value)} />
             </section>
         </main>
     )

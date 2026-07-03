@@ -108,6 +108,26 @@
         grid-template-columns: repeat(auto-fill, 30px);
         grid-template-rows: repeat(auto-fill, 30px);
     }
+ &__input{
+    -webkit-appearance: none;
+    margin-top: 20px;
+    display: flex;
+    background: transparent;
+    &::-webkit-slider-thumb { 
+        -webkit-appearance: none;
+        background: linear-gradient(125deg, #374151, #4b5563, #6b7280, #9ca3af);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-top: -4px;
+    }
+    &::-webkit-slider-runnable-track { 
+        background: linear-gradient(125deg, #6b7280, #9ca3af, #d1d5db, #f3f4f6); 
+        height: 8px;
+        border-radius: 3px;
+    }
+}
+
 }
 .bloc{
     width: 30px;
