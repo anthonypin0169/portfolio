@@ -10,7 +10,7 @@ function Careers () {
 
 
     return(
-        <main>
+        <main className="main">
 
             <h1 className="title">Mes compétances</h1>
 
@@ -48,7 +48,12 @@ function Careers () {
             </section>
 
             <section className="css-responsive">
-
+                <h2 className="css-responsive__h2">Responsive CSS</h2>
+                <div className="css-responsive__demo-container">
+                    {Array.from({length: 20}, (_, i) => (
+                        <div key={i} className={`bloc bloc-${i + 1}`}></div>
+                    ))}
+                </div>
             </section>
         </main>
     )
