@@ -1,20 +1,43 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { show, increment } from "../store/counterSlice"
 import "./careers.scss"
 function Careers () {
    
+
     const [rotate, setRotate] = useState([false, false, false])
     const toggleCard = (index) => {
         setRotate(rotate.map((val, i) => i === index ? !val : val))
     }
     const [width, setWidth] = useState(200)
 
+
     const count = useSelector((state) => state.counter.count)
     const visible = useSelector((state) => state.counter.visible)
     const dispatch = useDispatch()
 
+
     const [color, setColor] = useState("#ffffff")
+
+
+
+    const [progress, setProgress] = useState(0)
+    const directionRef = useRef(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProgress(prev => {
+                if (directionRef.current === 1) return Math.min(prev + 1, 100)
+                return Math.max(prev - 1, 0)
+            })
+        }, 15)
+        return () => clearInterval(interval)
+    }, [])
+
+    const startPress = () => { directionRef.current = 1 }
+    const stopPress = () => { directionRef.current = 0 }
+
+
 
     return(
         <main className="main">
@@ -81,7 +104,7 @@ function Careers () {
                     </div>
                     
                     <div className="redux__counter-container">
-                        <button className="redux__counter-container--btn">O</button>
+                        <button className="redux__counter-container--btn"></button>
                         <button onClick={() => dispatch(increment())} className="redux__counter-container--btn">+ 1</button>
                     </div>
                 </>    
@@ -101,6 +124,16 @@ function Careers () {
                             <h4 className="card-h4" style={{color: color}}>Choisir :</h4>
                             <p className="card-p" style={{color: color}}>Une couleur dans le sélecteur.</p>     
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="js-event">
+                <h2 className="js-event__h2">DOM - Events JavaScript</h2>
+                <div className="js-event__group">
+                    <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"></button>
+                    <div className="js-event__group--loader">
+                        <div className="loader-content" style={{width: `${progress}%`}}></div>
                     </div>
                 </div>
             </section>
