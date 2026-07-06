@@ -1,14 +1,19 @@
 import { useState } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { show, increment } from "../store/counterSlice"
 import "./careers.scss"
 function Careers () {
    
     const [rotate, setRotate] = useState([false, false, false])
-
     const toggleCard = (index) => {
         setRotate(rotate.map((val, i) => i === index ? !val : val))
     }
-
     const [width, setWidth] = useState(200)
+
+    const count = useSelector((state) => state.counter.count)
+    const visible = useSelector((state) => state.counter.visible)
+    const dispatch = useDispatch()
+
 
     return(
         <main className="main">
@@ -56,6 +61,34 @@ function Careers () {
                     ))}
                 </div>
                 <input className="css-responsive__input" type="range" min="100" max="300" value={width} onChange={(e) => setWidth(e.target.value)} />
+            </section>
+
+            <section className="redux">
+                <h2 className="redux__h2">Redux - partage de state</h2>
+                {visible ? 
+                <>
+                    <div className="redux__counter-container">
+                        <div className="redux__counter-container--box">
+                            <div className="numbers">{count}</div>
+                        </div>
+                        <div className="redux__counter-container--box">
+                            <div className="numbers">{count}</div>
+                        </div>
+                        <div className="redux__counter-container--box">
+                            <div className="numbers">{count}</div>
+                        </div>
+                    </div>
+                    
+                    <div className="redux__counter-container">
+                        <button className="redux__counter-container--btn">O</button>
+                        <button onClick={() => dispatch(increment())} className="redux__counter-container--btn">+ 1</button>
+                    </div>
+                </>    
+                :
+                    <div className="redux__counter-container">
+                        <button onClick={() => dispatch(show())} className="redux__counter-container--btn">O</button>
+                    </div>
+                }
             </section>
         </main>
     )
