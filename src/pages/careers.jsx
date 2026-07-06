@@ -14,6 +14,7 @@ function Careers () {
     const visible = useSelector((state) => state.counter.visible)
     const dispatch = useDispatch()
 
+    const [color, setColor] = useState("#ffffff")
 
     return(
         <main className="main">
@@ -86,9 +87,22 @@ function Careers () {
                 </>    
                 :
                     <div className="redux__counter-container">
-                        <button onClick={() => dispatch(show())} className="redux__counter-container--btn">O</button>
+                        <button onClick={() => dispatch(show())} className="redux__counter-container--btn open-btn">O</button>
                     </div>
                 }
+            </section>
+
+            <section className="react">
+                <h2 className="react__h2">React</h2>
+                <div className="react__container">
+                    <input type="color" onChange={(e) => setColor(e.target.value)} className="react__container--input"/>
+                    <div className="react__container--card" style={{background: color}}>
+                        <div className="card-bg">
+                            <h4 className="card-h4" style={{color: color}}>Choisir :</h4>
+                            <p className="card-p" style={{color: color}}>Une couleur dans le sélecteur.</p>     
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     )
