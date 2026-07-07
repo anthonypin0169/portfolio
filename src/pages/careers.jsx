@@ -110,7 +110,7 @@ function Careers () {
                 </>    
                 :
                     <div className="redux__counter-container">
-                        <button onClick={() => dispatch(show())} className="redux__counter-container--btn open-btn">O</button>
+                        <button onClick={() => dispatch(show())} className="redux__counter-container--btn open-btn"><i className="fa-solid fa-play"></i></button>
                     </div>
                 }
             </section>
@@ -131,9 +131,15 @@ function Careers () {
             <section className="js-event">
                 <h2 className="js-event__h2">DOM - Events JavaScript</h2>
                 <div className="js-event__group">
-                    <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"></button>
+                    <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"><i className="fa-solid fa-play"></i></button>
                     <div className="js-event__group--loader">
-                        <div className="loader-content" style={{width: `${progress}%`}}></div>
+                        {Array.from({length: 20}, (_, i) => (
+                            <div 
+                                key={i} 
+                                className="loader-bar"
+                                style={{opacity: progress >= (i + 1) * 5 ? 1 : 0}}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

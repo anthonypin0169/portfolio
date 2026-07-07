@@ -101,13 +101,7 @@
         }
     }
 }
-.fa-solid{
-    position: absolute;
-    top: 50%;
-    font-size: 50px;
-    color: #3b0764;
-    opacity: 0.4;
-}
+
 .left-btn{
     left: 0;
 }
@@ -115,10 +109,20 @@
     right: 0;
 }
 .fa-angle-left{
+    position: absolute;
     left: 15px;
+    top: 50%;
+    font-size: 50px;
+    color: #3b0764;
+    opacity: 0.4;
 }
 .fa-angle-right{
+    position: absolute;
     right: 15px;
+    top: 50%;
+    font-size: 50px;
+    color: #3b0764;
+    opacity: 0.4;
 }
 
 
