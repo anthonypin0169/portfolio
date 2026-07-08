@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { increment } from "../store/counterSlice"
-import SortDemo from "../components/sortDemo"
+import { increment } from "../../store/counterSlice"
+import SortDemo from "../../components/sortDemo/sortDemo"
 import "./careers.scss"
 
 function Careers () {

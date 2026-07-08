@@ -1,6 +1,6 @@
-import Particle from "../components/particles.jsx"
-import Card from "../components/cards.jsx"
-import Carrousel from "../components/carrousel.jsx"
+import Particle from "../../components/particles/particles.jsx"
+import Card from "../../components/cards/cards.jsx"
+import Carrousel from "../../components/carrousel/carrousel.jsx"
 import "./home.scss"
 function Home () {
     return(

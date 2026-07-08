@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Careers from "./pages/careers"
-import Contact from "./pages/contact"
-import Home from "./pages/home"
-import LegalNotice from "./pages/legalNotice"
-import Projects from "./pages/projects"
-import Header from "./components/header"
-import Footer from "./components/footer"
+import Careers from "./pages/careers/careers"
+import Contact from "./pages/contact/contact"
+import Home from "./pages/home/home"
+import LegalNotice from "./pages/legalNotice/legalNotice"
+import Projects from "./pages/projects/projects"
+import Header from "./components/header/header"
+import Footer from "./components/footer/footer"
 
 
 function App(){

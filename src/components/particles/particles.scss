@@ -1,4 +1,4 @@
-@use '../index' as *;
+@use '../../index' as *;
 
 #tsParticles canvas {
     filter: drop-shadow(1px 1px 10px $accents-v2)drop-shadow(1px 1px 5px $accents-v2)drop-shadow(1px 1px 10px $accents-v2);

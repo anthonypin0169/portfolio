@@ -1,5 +1,5 @@
 import { useState } from "react"
-import schoolProjects from "../data/schoolProjects"
+import schoolProjects from "../../data/schoolProjects"
 import "./carrousel.scss"
 function Carrousel () {
 

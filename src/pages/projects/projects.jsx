@@ -1,6 +1,6 @@
 import { useState } from "react"
-import persProjects from "../data/persProjects.js"
-import Card from "../components/cards.jsx"
+import persProjects from "../../data/persProjects.js"
+import Card from "../../components/cards/cards.jsx"
 import "./projects.scss"
 
 function Projects () {
