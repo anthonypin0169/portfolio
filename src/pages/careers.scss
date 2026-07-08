@@ -307,6 +307,7 @@ $gradients: (
     padding: 30px 0 50px 0;
     &__h2{
         margin-bottom: 20px;
+        text-align: center;
     }
     &__btn{
         width: 40px;
@@ -333,15 +334,17 @@ $gradients: (
         width: 45%;
         h3{
             font-size: 0.9rem;
-            margin-bottom: 10px;
             text-align: center;
+        }
+        &--2nd-h3{
+            margin-bottom: 31px;
         }
     }
 }
 .sort-demo{
     &__bars{
-        width: 100%;
-        height: 150px;
+        width: 90%;
+        height: 120px;
         display: flex;
         align-items: flex-end;
         gap: 2px;
@@ -356,5 +359,27 @@ $gradients: (
         background: $cards;
         min-width: 2px;
         border-radius: 1px 1px 0 0;
+    }
+}
+.border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px 0;
+    padding: 6px 0;
+    border-radius: 7px;
+    background: $border-gradient;
+    &__detail-card{
+        width: 96%;
+        border-radius: 7px;
+        background: $cards;
+        &--paragraph{
+            text-align: center;
+            margin: 20px 20px 10px 20px;
+        }
+        &--sub-paragraph{
+        
+        }
     }
 }

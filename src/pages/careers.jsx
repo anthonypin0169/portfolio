@@ -184,6 +184,16 @@ function Careers () {
                         </div>
                     </div>
                 </div>
+                <div className="border">
+                    <div className="border__detail-card">
+                        <h4 className="border__detail-card--paragraph">Intégrer des animations fluides.</h4>
+                        <ul className="border__detail-card--sub-paragraph">
+                            <li>Controle de la fluidité (Transition pour anim simple - keyframes pour séquances complexes)</li>
+                            <li>Fonctions de timing (Cubic-bezier pour un mouvement naturel)</li>
+                            <li>Limiter les animations simultanées</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section className="css-responsive">
@@ -194,6 +204,16 @@ function Careers () {
                     ))}
                 </div>
                 <input className="css-responsive__input" type="range" min="100" max="300" value={width} onChange={(e) => setWidth(e.target.value)} />
+                <div className="border">
+                    <div className="border__detail-card">
+                        <h4 className="border__detail-card--paragraph">Organiser les éléments pour qu'ils s'adaptent aux differentes tailles d'écrans.</h4>
+                        <ul className="border__detail-card--sub-paragraph">
+                            <li>Media queries (BreakPoints)</li>
+                            <li>Unités relatives (%, vw/vh, rem/em..)</li>
+                            <li>Mise en page (Grid/Flexbox adaptatifs..)</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section className="redux">
@@ -216,6 +236,16 @@ function Careers () {
                         <button className="redux__counter-container--btn"></button>
                         <button onClick={() => dispatch(increment())} className="redux__counter-container--btn">+ 1</button>
                     </div>
+                    <div className="border">
+                        <div className="border__detail-card">
+                            <h4 className="border__detail-card--paragraph">Partager des états entre les differents composants.</h4>
+                            <ul className="border__detail-card--sub-paragraph">
+                                <li>Etat UI global (Modals, thème, sideBar..)</li>
+                                <li>Etat serveurs/data (Résultats d'API, caches de ressources..)</li>
+                                <li>Etat d'authentification (Connexion user, token..)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </>    
                 :
                     <div className="redux__counter-container">
@@ -235,6 +265,16 @@ function Careers () {
                         </div>
                     </div>
                 </div>
+                <div className="border">
+                    <div className="border__detail-card">
+                        <h4 className="border__detail-card--paragraph">Changer des éléments sans re-render.</h4>
+                        <ul className="border__detail-card--sub-paragraph">
+                            <li>Optimisation des images (compression Avif, lazy loading ...)</li>
+                            <li>Minification (JS / CSS minifiés, tree-shaking ...)</li>
+                            <li>Mise en cache (Navigateur, CDN ...)</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section className="js-event">
@@ -249,6 +289,16 @@ function Careers () {
                                 style={{opacity: progress >= (i + 1) * 5 ? 1 : 0}}
                             />
                         ))}
+                    </div>
+                </div>
+                <div className="border">
+                    <div className="border__detail-card">
+                        <h4 className="border__detail-card--paragraph">Intégrer des évenements qui réagissent aux interaction avec l'utilisateur.</h4>
+                        <ul className="border__detail-card--sub-paragraph">
+                            <li>Souris (Clic, hover, mouseEnter/leave..)</li>
+                            <li>Clavier (keydown, keyup, keypress..)</li>
+                            <li>Formulaires (submit, change, input..)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -271,12 +321,22 @@ function Careers () {
                     </div>
 
                     <div className="optimisation__container">
-                        <h3>Quick sort (optimisé)</h3>
+                        <h3 className="optimisation__container--2nd-h3">Quick sort (optimisé)</h3>
                         <div className="sort-demo__bars">
                             {optiBars.map((value, i) => (
                                 <div key={i} className="sort-demo__bar" style={{ height: `${value}%` }} />
                             ))}
                         </div>
+                    </div>
+                </div>
+                <div className="border">
+                    <div className="border__detail-card">
+                        <h4 className="border__detail-card--paragraph">Optimiser les differents éléments afin d'alléger le site.</h4>
+                        <ul className="border__detail-card--sub-paragraph">
+                            <li>Optimisation des images (compression Avif, lazy loading..)</li>
+                            <li>Minification (JS / CSS minifiés, tree-shaking..)</li>
+                            <li>Mise en cache (Navigateur, CDN..)</li>
+                        </ul>
                     </div>
                 </div>
             </section>
