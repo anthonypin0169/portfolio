@@ -12,7 +12,7 @@ function Projects () {
     return(
         <main>
             <section className="personnal-works">
-                <h2 className="personnal-works__title">Des projets choisis, construits à ma façon.</h2>
+                <h1 className="personnal-works__title">Des projets choisis, construits à ma façon.</h1>
                 <h3 className="personnal-works__title">Projets achevés..</h3>
                 <h3 className="personnal-works__title">Projets en cours..</h3>
                 <Card onClick={() => {setSelectedProject(1); setModalIsOpen(true)}} className="personnal-works__card" contentClass="personnal-works__content" text="Coté détente" src="./images/cotedetente1.png" alt="photo de la page d'accueil du site Coté détente" imageClass="personnal-works__img"/>

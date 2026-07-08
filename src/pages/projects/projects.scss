@@ -1,5 +1,8 @@
 @use '../../index' as *;
 
+h1{
+    font-size: 26px;
+}
 .personnal-works{
     display: flex;
     flex-direction: column;
