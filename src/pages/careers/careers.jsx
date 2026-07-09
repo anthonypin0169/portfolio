@@ -48,7 +48,7 @@ function Careers () {
     return(
         <main className="main">
 
-            <h1 className="title">Mes compétances</h1>
+            <h1>Mes compétances</h1>
 
             <section className="css-anim">
 
