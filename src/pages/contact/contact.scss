@@ -16,7 +16,7 @@
 .form{
     height: 100%;
     width: 85%;
-    padding: 12px;
+    padding: 7px;
     border-radius: 10px;
     background: $border-gradient;
     display: flex;
@@ -27,6 +27,7 @@
         flex-direction: column;
         gap: 10px;
         background: $cards;
+        border-radius: 10px;
         &--input{
             display: flex;
             justify-content: space-between;
