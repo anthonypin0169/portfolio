@@ -85,3 +85,14 @@
         opacity: 1;
     }
 }
+
+@media (min-width : 1023px) {
+    .overlay{
+        display : none;
+    }
+    .header{
+        &__menuModal{
+        display : none;            
+        }
+    }
+}

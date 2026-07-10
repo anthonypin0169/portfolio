@@ -81,9 +81,6 @@
     align-items: center;
     gap: 30px;
     padding: 50px 0;
-    &__title{
-
-    }
     &__sub-section{
         display: flex;
         flex-direction: column;
@@ -103,6 +100,154 @@
             font-size: 18px;
             padding: 10px;
             border-radius: 8px;
+        }
+    }
+}
+
+@media (min-width : 400px) {
+    .banner{
+        &__h2{
+            margin-top: 20px;
+            font-size: 26px;
+        }
+        &__h1{
+            font-size: 30px;
+            
+        }
+        &__h3{
+            font-size: 22px;
+
+        }
+    }
+    .title{
+        margin-left: 15%;
+    }
+    .school-projects{
+        &__h3{
+            margin: 30px 15%;
+        }
+    }
+    .path{
+        &__sub-section{
+            width: 80%;
+        }
+    }
+}
+@media (min-width : 768px) {
+    .path{
+        padding: 50px 0 150px 0;
+    }
+}
+@media (min-width : 1024px) {
+    .banner{
+        &__h2{
+            margin-top: 30px;
+            font-size: 30px;
+        }
+        &__h1{
+            font-size: 34px;
+        }
+        &__h3{
+            font-size: 26px;
+        }
+    }
+    .title{
+        margin-left: 15%;
+    }
+    .introduction{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        &__text{
+            width: 25%;
+            height: 150px;
+            padding: 7px;
+            text-align: center;
+        }
+        &__content{
+            height: 80%;
+            font-size: 22px;
+            padding: 25px 15px 5px 15px;
+        }
+    }
+    .school-projects{
+        &__h2{
+            font-size: 28px;
+        }
+        &__h3{
+            margin: 30px 15%;
+            font-size: 23px;
+        }
+    }
+    .path{
+        &__title{
+            font-size: 28px;
+        }
+        &__sub-section{
+            &--h3{
+                margin-left: 5%;
+                font-size: 23px;
+            }
+            &--content{
+                font-size: 22px;             
+            }
+        }
+    }
+}
+@media (min-width : 1440px){
+    .banner{
+        &__h2{
+            margin-top: 50px;
+            font-size: 34px;
+        }
+        &__h1{
+            font-size: 38px; 
+        }
+        &__h3{
+            font-size: 30px;
+        }
+    }
+    .title{
+        margin-left: 15%;
+    }
+    .introduction{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        &__text{
+            width: 27%;
+            height: 170px;
+        }
+        &__content{
+            height: 80%;
+            padding: 33px 15px 0 15px;
+        }
+    }
+    .school-projects{
+        &__h2{
+            font-size: 32px;
+        }
+        &__h3{
+            margin: 30px 20%;
+            font-size: 27px;
+        }
+    }
+    .path{
+        &__title{
+            font-size: 32px;
+        }
+        &__sub-section{
+            &--h3{
+                font-size: 27px;
+            }
+            &--text{
+                padding: 7px;
+            }
+            &--content{  
+                padding: 25px;          
+            }
         }
     }
 }

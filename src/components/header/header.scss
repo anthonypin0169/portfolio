@@ -99,3 +99,71 @@
         box-shadow: 1px 1px 2px $accents-v2;
     }
 }
+@media (min-width : 768px) {
+    .header{
+        &__nav{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-right: 20px;
+            &--link{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width : 1024px) {
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $cards;
+        height: 100px;
+        position: relative;
+        &__icon{
+            display: none;
+        }
+        &__nav{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-right: 20px;
+            &--link{
+                font-size: 24px;
+            }
+        }
+    }
+    .header__nav--link::after{
+        content: "";
+        display: block;
+        width: 0px;
+        height: 2px;
+        background: $textes-v1;
+        margin: 3px auto 0 auto;
+        border-radius: 2px;
+        transition: width 0.2s ease-in-out;
+    }
+    .header__nav--link:hover::after{
+        width: 100%;
+        background: $textes-v1;  
+    }
+    .header__nav--link.active {
+        color: $textes-v2;
+    }
+    .header__nav--link.active::after {
+        color: $textes-v2;
+        width: 100%;
+    }
+
+    .header__icon.jump{
+        position: relative;
+        z-index: 3;
+        animation: iconJump 600ms ease forwards;
+    }
+    .header__icon.land{
+        position: relative;
+        z-index: 3;
+        animation: iconLand 600ms ease backwards;
+    }
+}

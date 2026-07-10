@@ -1,0 +1,26 @@
+@use '../../index' as *;
+
+.footer{
+    height: 120px;
+    background: $cards;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        &__group{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &--link{
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 24px;
+                margin: 0;
+            }
+        }
+    }
+    
+@media (max-width : 1023px) {
+    .footer{
+        display: none;
+    }
+}
