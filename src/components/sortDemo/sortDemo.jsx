@@ -132,7 +132,7 @@ function SortDemo() {
             </div>
             <div className="border">
                 <div className="border__detail-card">
-                    <h4 className="border__detail-card--paragraph">Optimiser les differents éléments afin d'alléger le site.</h4>
+                    <h4 className="border__detail-card--paragraph">Optimiser les différents éléments afin d'alléger le site.</h4>
                     <ul className="border__detail-card--sub-paragraph">
                         <li>Optimisation des images (compression Avif, lazy loading..)</li>
                         <li>Minification (JS / CSS minifiés, tree-shaking..)</li>

@@ -57,6 +57,11 @@ function Carrousel () {
                     <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
                     <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
 
+                    <div className="carrousel__modal--improvements">
+                        <h3>Axes d'améliorations :</h3>
+                        <p>{schoolProjects[carrouselState].improvements}</p>
+                    </div>
+
                     <div className="carrousel__modal--logo">
                         <h3 className="logo-text">Ce projet m'a permis de travailler avec :</h3>
                         {schoolProjects[carrouselState].logoTech.map((logo,index) => (

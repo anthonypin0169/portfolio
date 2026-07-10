@@ -21,6 +21,8 @@
     text-shadow: 3px 3px 2px $cards;
 }
 
+
+
 .introduction{
     display: flex;
     flex-direction: column;
@@ -45,6 +47,8 @@
     }
 }
 
+
+
 .school-projects{
     display: flex;
     flex-direction: column;
@@ -66,5 +70,39 @@
     }
     &__h3{
         margin: 30px 15px;
+    }
+}
+
+
+
+.path{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 0;
+    &__title{
+
+    }
+    &__sub-section{
+        display: flex;
+        flex-direction: column;
+        &--h3{
+            margin-left: 15px;
+        }
+        &--text{
+            width: 90%;
+            background: $border-gradient;
+            padding: 5px;
+            border-radius: 8px;   
+            align-self: center;
+        }
+        &--content{
+            background: $cards;
+            color: $textes-v1;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+        }
     }
 }

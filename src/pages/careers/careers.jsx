@@ -48,7 +48,7 @@ function Careers () {
     return(
         <main className="main">
 
-            <h1>Mes compétances</h1>
+            <h1>Mes compétences</h1>
 
             <section className="css-anim">
 
@@ -85,7 +85,7 @@ function Careers () {
                     <div className="border__detail-card">
                         <h4 className="border__detail-card--paragraph">Intégrer des animations fluides.</h4>
                         <ul className="border__detail-card--sub-paragraph">
-                            <li>Controle de la fluidité (Transition pour anim simple - keyframes pour séquances complexes)</li>
+                            <li>Contrôle de la fluidité (Transition pour anim simple - keyframes pour séquences complexes)</li>
                             <li>Fonctions de timing (Cubic-bezier pour un mouvement naturel)</li>
                             <li>Limiter les animations simultanées</li>
                         </ul>
@@ -103,7 +103,7 @@ function Careers () {
                 <input className="css-responsive__input" type="range" min="100" max="300" value={width} onChange={(e) => setWidth(e.target.value)} />
                 <div className="border">
                     <div className="border__detail-card">
-                        <h4 className="border__detail-card--paragraph">Organiser les éléments pour qu'ils s'adaptent aux differentes tailles d'écrans.</h4>
+                        <h4 className="border__detail-card--paragraph">Organiser les éléments pour qu'ils s'adaptent aux différentes tailles d'écrans.</h4>
                         <ul className="border__detail-card--sub-paragraph">
                             <li>Media queries (BreakPoints)</li>
                             <li>Unités relatives (%, vw/vh, rem/em..)</li>
@@ -129,7 +129,7 @@ function Careers () {
                     <button onClick={() => dispatch(increment())} className="redux__btn">+ 1</button>
                     <div className="border">
                         <div className="border__detail-card">
-                            <h4 className="border__detail-card--paragraph">Partager des états entre les differents composants.</h4>
+                            <h4 className="border__detail-card--paragraph">Partager des états entre les différents composants.</h4>
                             <ul className="border__detail-card--sub-paragraph">
                                 <li>Etat UI global (Modals, thème, sideBar..)</li>
                                 <li>Etat serveurs/data (Résultats d'API, caches de ressources..)</li>
@@ -178,7 +178,7 @@ function Careers () {
                 </div>
                 <div className="border">
                     <div className="border__detail-card">
-                        <h4 className="border__detail-card--paragraph">Intégrer des évenements qui réagissent aux interaction avec l'utilisateur.</h4>
+                        <h4 className="border__detail-card--paragraph">Intégrer des événements qui réagissent aux interactions avec l'utilisateur.</h4>
                         <ul className="border__detail-card--sub-paragraph">
                             <li>Souris (Clic, hover, mouseEnter/leave..)</li>
                             <li>Clavier (keydown, keyup, keypress..)</li>
