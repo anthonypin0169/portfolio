@@ -1,13 +1,13 @@
 @use '../../index' as *;
 
-h1{
-    font-size: 26px;
-}
 .personnal-works{
     display: flex;
     flex-direction: column;
     align-items: center;
     &__title{
+        
+    }
+    &__sub-title{
         margin-left: 15px;
         align-self: flex-start;
     }
@@ -111,4 +111,15 @@ h1{
 }
 .stick2{
     transform: rotate(-45deg);
+}
+
+@media (min-width : 1440px) {
+    .personnal-works{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title{
+            margin-top: 50px;
+        }
+    }
 }

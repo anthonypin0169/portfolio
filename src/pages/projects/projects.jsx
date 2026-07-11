@@ -13,8 +13,8 @@ function Projects () {
         <main>
             <section className="personnal-works">
                 <h1 className="personnal-works__title">Des projets choisis, construits à ma façon.</h1>
-                <h3 className="personnal-works__title">Projets achevés..</h3>
-                <h3 className="personnal-works__title">Projets en cours..</h3>
+                <h3 className="personnal-works__sub-title">Projets achevés..</h3>
+                <h3 className="personnal-works__sub-title">Projets en cours..</h3>
                 <Card onClick={() => {setSelectedProject(1); setModalIsOpen(true)}} className="personnal-works__card" contentClass="personnal-works__content" text="Côté détente" src="./images/cotedetente1.png" alt="photo de la page d'accueil du site Côté détente" imageClass="personnal-works__img"/>
                 <div className={`overlay ${modalIsOpen ? 'hide' : ''}`} onClick={() => setModalIsOpen(false)}>
                     <div className={`personnal-works__modal ${modalIsOpen ? "open" : "" }`} onClick={(e) => e.stopPropagation()}>

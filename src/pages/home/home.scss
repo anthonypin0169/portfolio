@@ -108,15 +108,6 @@
     .banner{
         &__h2{
             margin-top: 20px;
-            font-size: 26px;
-        }
-        &__h1{
-            font-size: 30px;
-            
-        }
-        &__h3{
-            font-size: 22px;
-
         }
     }
     .title{
@@ -142,13 +133,6 @@
     .banner{
         &__h2{
             margin-top: 30px;
-            font-size: 30px;
-        }
-        &__h1{
-            font-size: 34px;
-        }
-        &__h3{
-            font-size: 26px;
         }
     }
     .title{
@@ -172,25 +156,17 @@
         }
     }
     .school-projects{
-        &__h2{
-            font-size: 28px;
-        }
         &__h3{
             margin: 30px 15%;
-            font-size: 23px;
         }
     }
     .path{
-        &__title{
-            font-size: 28px;
-        }
         &__sub-section{
             &--h3{
                 margin-left: 5%;
-                font-size: 23px;
             }
             &--content{
-                font-size: 22px;             
+                font-size: 22px;
             }
         }
     }
@@ -205,15 +181,10 @@
 }
 @media (min-width : 1440px){
     .banner{
+        height: 45dvh;
+        margin-bottom: 50px;
         &__h2{
             margin-top: 50px;
-            font-size: 34px;
-        }
-        &__h1{
-            font-size: 38px; 
-        }
-        &__h3{
-            font-size: 30px;
         }
     }
     .title{
@@ -234,12 +205,8 @@
         }
     }
     .school-projects{
-        &__h2{
-            font-size: 32px;
-        }
         &__h3{
-            margin: 30px 20%;
-            font-size: 27px;
+            margin: 70px 20% 50px 20%;
         }
         &__cards{
             width: 100%;
@@ -255,12 +222,13 @@
                 align-items: center;
             }
             &--content{
-                height: 94%;
+                height: 90%;
                 width: 96%;
                 display: flex;
                 flex-direction: column;               
                 background: $cards;
                 border-radius: 8px;
+                padding-bottom: 12px;
             }
             &--title{
                 margin: 15px 0 10px 20px;
@@ -307,33 +275,26 @@
         overflow-x: hidden;
         &--close-btn{
             position: relative;
-            width: 33px;
-            height: 33px;
-            margin: 20px 20px 0 85%;
+            width: 45px;
+            height: 45px;
+            margin: 30px 30px 0 90%;
             display: flex;
             flex-shrink: 0;
             box-shadow: 1px 1px 2px #7c22bb;
         }
         .close-btn-stick{
-            position: absolute;
-            top: 13px;
-            left: 3px;
-            width: 25px;
-            height: 4px;
-            border-radius: 1px;
-            background: $cards;
+            top: 17px;
+            left: 4px;
+            width: 35px;
+            height: 6px;
+            border-radius: 3px;
         }
-        .stick1{
-            transform: rotate(45deg);
-        }
-        .stick2{
-            transform: rotate(-45deg);
-        }
+
         &--title{
-            margin: 0 0 0 15px;
+            margin: 0 0 0 30px;
         }
         &--context{
-            margin: 15px 0 15px 15px;
+            margin: 15px 30px 15px 30px;
         }
         &--img{
             width: 95%;
@@ -350,20 +311,21 @@
             background: transparent;
         }
         .logo-text{
-            margin-left: 15px;
+            margin-left: 30px;
+            
         }
         .logo{
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 15px;
-            margin: 15px;
+            margin: 30px;
         }
         &--p{
-            margin: 10px 15px;
+            margin: 10px 30px;
             word-break: break-all;
         }
         &--improvements{
-            margin: 0 15px;
+            margin: 0 30px;
         }
     }
     .left-btn{
@@ -389,18 +351,12 @@
         opacity: 0.4;
     }
     .path{
-        &__title{
-            font-size: 32px;
-        }
         &__sub-section{
-            &--h3{
-                font-size: 27px;
-            }
             &--text{
                 padding: 7px;
             }
-            &--content{  
-                padding: 25px;          
+            &--content{
+                padding: 25px;
             }
         }
     }
