@@ -1,6 +1,6 @@
 @use '../../index' as *;
 
-.overlay{
+.overlay-menu{
     position: fixed;
     z-index: 2;
     top: 0;
@@ -12,7 +12,7 @@
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 }
-.overlay.hide{
+.overlay-menu.hide{
     opacity: 1;
     pointer-events: auto;
 }
@@ -87,7 +87,7 @@
 }
 
 @media (min-width : 1023px) {
-    .overlay{
+    .overlay-menu{
         display : none;
     }
     .header{

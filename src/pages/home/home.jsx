@@ -1,8 +1,31 @@
+import { useState } from "react"
 import Particle from "../../components/particles/particles.jsx"
 import Card from "../../components/cards/cards.jsx"
 import Carrousel from "../../components/carrousel/carrousel.jsx"
+import schoolProjects from "../../data/schoolProjects.js"
 import "./home.scss"
 function Home () {
+    const [selectedProjectId, setSelectedProjectId] = useState(null)
+    const [screenState, setScreenState] = useState(0)
+    const selectedProject = schoolProjects.find(p => p.id === selectedProjectId)
+
+    const openModal = (id) => {
+        setSelectedProjectId(id)
+        setScreenState(0)
+    }
+    const closeModal = () => setSelectedProjectId(null)
+
+    const prevScreen = () => {
+        setScreenState(
+            screenState === 0 ? selectedProject.picture.length - 1 : screenState - 1
+        )
+    }
+    const nextScreen = () => {
+        setScreenState(
+            (screenState + 1) % selectedProject.picture.length
+        )
+    }
+
     return(
         <main>
             <section className="banner" >
@@ -21,6 +44,51 @@ function Home () {
             <section className="school-projects">
                 <h2 className="school-projects__h2">Mes projets de formation</h2>
                 <Carrousel />
+                <div className="school-projects__cards">
+                    {schoolProjects.map((project) => (
+                        <Card
+                            key={project.id}
+                            className="school-projects__cards--border"
+                            contentClass="school-projects__cards--content"
+                            imageClass="school-projects__cards--img"
+                            src={project.picture[0]}
+                            alt={project.alt}
+                            text={<h3 className="school-projects__cards--title">{project.title}</h3>}
+                            onClick={() => openModal(project.id)}
+                        />
+                    ))}
+                </div>
+
+                <div className={`overlay-projects ${selectedProjectId ? "hide" : "" }`} onClick={closeModal}>
+                    <div className={`school-projects__modal ${selectedProjectId ? "open" : ""}`} onClick={(e) => e.stopPropagation()}>
+                        <button onClick={closeModal} className="school-projects__modal--close-btn">
+                            <div className="close-btn-stick stick1"></div>
+                            <div className="close-btn-stick stick2"></div>
+                        </button>
+
+                        <h2 className="school-projects__modal--title">{selectedProject?.title}</h2>
+                        <p className="school-projects__modal--context">{selectedProject?.context}</p>
+
+                        <img src={selectedProject?.picture[screenState]} alt={selectedProject?.alt} className="school-projects__modal--img" />
+                        <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
+                        <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+
+                        <div className="school-projects__modal--improvements">
+                            <h3>Axes d'améliorations :</h3>
+                            <p>{selectedProject?.improvements}</p>
+                        </div>
+
+                        <div className="school-projects__modal--logo">
+                            <h3 className="logo-text">Ce projet m'a permis de travailler avec :</h3>
+                            {selectedProject?.logoTech.map((logo, index) => (
+                                <img key={index} src={logo} alt={selectedProject.altLogoTech[index]} className="logo"/>
+                            ))}
+                        </div>
+                        <h3 className="school-projects__modal--p">Pour en savoir plus sur le projet..</h3>
+                        <p className="school-projects__modal--p">{selectedProject?.repository}</p>
+                    </div>
+                </div>
+
                 <h3 className="school-projects__h3">Ces projets reflètent ma progression et ma capacité à livrer des interfaces fonctionnelles, structurées et pensées pour l'utilisateur.</h3>
             </section>
 

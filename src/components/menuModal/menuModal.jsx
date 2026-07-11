@@ -5,7 +5,7 @@ function MenuModal ({isOpen, onClose}) {
     return(
         <>
         
-            <div className={`overlay ${isOpen ? 'hide' : ''}`} onClick={onClose}>
+            <div className={`overlay-menu ${isOpen ? 'hide' : ''}`} onClick={onClose}>
                 <nav className={`header__menuModal ${isOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
                     <div className="header__menuModal--group-1">
                         <Nav text = "Hobbies tech et ressources" redirection = "/projets" className = {`link link-grp1 ${isOpen ? 'slide' : ''}`}/>

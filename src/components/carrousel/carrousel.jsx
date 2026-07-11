@@ -35,9 +35,15 @@ function Carrousel () {
         <div className="carrousel">
             <article onClick={() => setModalIsOpen(true)} className="carrousel__card">
                 <h2 className="carrousel__card--title">{schoolProjects[carrouselState].title}</h2>
-                <img src={schoolProjects[carrouselState].picture[0]} alt={schoolProjects[carrouselState].alt} className="carrousel__card--img" />
-                <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                <div className="carrousel__card--img-wrapper">
+                    <img
+                    src={schoolProjects[carrouselState].picture[0]}
+                    alt={schoolProjects[carrouselState].alt}
+                    className="carrousel__card--img"
+                    />
+                    <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
+                    <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                </div>
             </article>
 
 
@@ -53,9 +59,11 @@ function Carrousel () {
                     <h2 className="carrousel__modal--title">{schoolProjects[carrouselState].title}</h2>
                     <p className="carrousel__modal--context">{schoolProjects[carrouselState].context}</p>
 
-                    <img src={schoolProjects[carrouselState].picture[screenState]} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
-                    <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                    <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                    <div className="carrousel__modal--img-wrapper">
+                        <img src={schoolProjects[carrouselState].picture[screenState]} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
+                        <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
+                        <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                    </div>
 
                     <div className="carrousel__modal--improvements">
                         <h3>Axes d'améliorations :</h3>

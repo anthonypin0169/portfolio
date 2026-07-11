@@ -13,6 +13,9 @@
         &--title{
             margin: 10px 30px;
         }
+        &--img-wrapper{
+            position: relative;
+        }
         &--img{
             width: 100%;
             max-height: 148px;
@@ -72,18 +75,22 @@
         &--context{
             margin: 15px 0 15px 15px;
         }
-        &--img{
-            width: 95%;
+        &--img-wrapper{
+            position: relative;
             align-self: center;
+            width: 95%;
+        }
+        &--img{
+            width: 100%;
             border-radius: 5px;
             margin: 10px 0;
         }
         &--arrow{
             width: 70px;
-            height: 164px;
+            height: 100%;
             border: none;
             position: absolute;
-            top: 30%;
+            top: 0;
             background: transparent;
         }
         .logo-text{
@@ -114,7 +121,7 @@
 .fa-angle-left{
     position: absolute;
     left: 15px;
-    top: 50%;
+    top: 40%;
     font-size: 50px;
     color: #3b0764;
     opacity: 0.4;
@@ -122,13 +129,11 @@
 .fa-angle-right{
     position: absolute;
     right: 15px;
-    top: 50%;
+    top: 40%;
     font-size: 50px;
     color: #3b0764;
     opacity: 0.4;
 }
-
-
 .overlay{
     position: fixed;
     z-index: 2;
@@ -148,14 +153,57 @@
 @media (min-width : 400px){
     .carrousel{
         max-width: 452px;
+        &__modal--img-wrapper {
+            width: 90%;
+        }
+        &__card{
+            &--img-wrapper{
+                display: flex;
+                justify-content: center;
+            }
+            &--img{
+                width: 95%;
+            }
+        }
     }
 }
 @media (min-width : 768px){
-
+    .carrousel{
+        height: 250px;
+        &__card{
+            padding: 8px 8px 12px 8px;
+            &--img{
+                max-height: 177px;
+            }
+        }
+    }
+    .fa-angle-left{
+        font-size: 55px;
+    }
+    .fa-angle-right{
+        font-size: 55px; 
+    }
 }
 @media (min-width : 1024px){
-
+    .carrousel{
+        max-width: none;
+        width: 55%;
+        height: 340px;
+        &__card{
+            &--img{
+                max-height: 267px;
+            }
+        }
+    }
+    .fa-angle-left{
+        font-size: 60px;
+    }
+    .fa-angle-right{
+        font-size: 60px; 
+    }    
 }
 @media (min-width : 1440px){
-
+    .carrousel{
+        display: none;
+    }
 }
