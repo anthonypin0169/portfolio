@@ -296,18 +296,22 @@
         &--context{
             margin: 15px 30px 15px 30px;
         }
-        &--img{
-            width: 95%;
+        &--img-wrapper{
+            position: relative;
             align-self: center;
+            width: 95%;
+        }
+        &--img{
+            width: 100%;
             border-radius: 5px;
             margin: 10px 0;
         }
         &--arrow{
             width: 70px;
-            height: 164px;
+            height: 100%;
             border: none;
             position: absolute;
-            top: 30%;
+            top: 0;
             background: transparent;
         }
         .logo-text{
@@ -341,6 +345,7 @@
         font-size: 50px;
         color: #3b0764;
         opacity: 0.4;
+        font-size: 60px;
     }
     .fa-angle-right{
         position: absolute;
@@ -349,6 +354,7 @@
         font-size: 50px;
         color: #3b0764;
         opacity: 0.4;
+        font-size: 60px;
     }
     .path{
         &__sub-section{

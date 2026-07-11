@@ -326,14 +326,12 @@ $gradients: (
     .responsive-bloc{
         display: flex;
     }
+    .border{
+        margin-top: auto;
+    }
 
 
     
-    .css-anim{
-        &__card-group{
-            margin-bottom: 27px;
-        }
-    }
     .card{
         width: 100px;
         height: 150px;
@@ -358,6 +356,7 @@ $gradients: (
 
     .react{
         &__container{
+            margin-bottom: 20px;
             &--input{
                 width: 100px;
                 height: 60px;
@@ -370,7 +369,6 @@ $gradients: (
     }
     .card-h4{
         margin: 20px 8px;
-        font-size: 20px;
     }
     .card-p{
         margin: 10px 8px;
@@ -381,7 +379,6 @@ $gradients: (
     .js-event{
         &__group{
             justify-content: center;
-            margin: 120px 0 70px 0;
             &--btn{
                 width: 45px;
                 height: 45px;
@@ -398,7 +395,6 @@ $gradients: (
 
     .redux{
         &__counter-container{
-            margin: 97px 0 30px 0;
             &--box{
                 padding: 7px 20px;
                 margin: 0 10px;
@@ -412,39 +408,30 @@ $gradients: (
         }
     }
 }
-@media (min-width : 1143px) {
-    .css-anim{
-        &__card-group{
-            margin-bottom: 46px;
+@media (min-width : 1111px) {
+    .react{
+        &__container{
+            margin-bottom: 20px;
+            &--input{
+                width: 100px;
+                height: 60px;
+            }
+            &--card{
+                width: 140px;
+                height: 204px;
+            }
         }
     }
+}
+@media (min-width : 1143px) {
     .card{
         width: 100px;
         height: 150px;
-    }
-}
-@media (min-width : 1040px) {
-    .redux{
-        &__counter-container{
-            margin: 80px 0 30px 0;
-        }
-    }
-}
-@media (min-width : 1400px) {
-    .redux{
-        &__counter-container{
-            margin: 93px 0 30px 0;
-        }
     }
 }
 @media (min-width : 1440px) {
     .responsive-bloc{
         width: 85%;
         gap: 5%;
-    }
-    .js-event{
-        &__group{
-            margin: 100px 0 70px 0;
-        }
     }
 }

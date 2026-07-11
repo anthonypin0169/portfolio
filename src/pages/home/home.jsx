@@ -69,9 +69,11 @@ function Home () {
                         <h2 className="school-projects__modal--title">{selectedProject?.title}</h2>
                         <p className="school-projects__modal--context">{selectedProject?.context}</p>
 
-                        <img src={selectedProject?.picture[screenState]} alt={selectedProject?.alt} className="school-projects__modal--img" />
-                        <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                        <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                        <div className="school-projects__modal--img-wrapper">
+                            <img src={selectedProject?.picture[screenState]} alt={selectedProject?.alt} className="school-projects__modal--img" />
+                            <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
+                            <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                        </div>
 
                         <div className="school-projects__modal--improvements">
                             <h3>Axes d'améliorations :</h3>
