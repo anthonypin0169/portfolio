@@ -122,7 +122,8 @@
     position: absolute;
     left: 15px;
     top: 40%;
-    font-size: 50px;
+    width: 50px;
+    height: 50px;
     color: #3b0764;
     opacity: 0.4;
 }
@@ -130,7 +131,8 @@
     position: absolute;
     right: 15px;
     top: 40%;
-    font-size: 50px;
+    width: 50px;
+    height: 50px;
     color: #3b0764;
     opacity: 0.4;
 }
@@ -178,10 +180,12 @@
         }
     }
     .fa-angle-left{
-        font-size: 55px;
+        width: 55px;
+        height: 55px;
     }
     .fa-angle-right{
-        font-size: 55px; 
+        width: 55px;
+        height: 55px;
     }
 }
 @media (min-width : 1024px){
@@ -196,10 +200,12 @@
         }
     }
     .fa-angle-left{
-        font-size: 60px;
+        width: 60px;
+        height: 60px;
     }
     .fa-angle-right{
-        font-size: 60px; 
+        width: 60px;
+        height: 60px;
     }    
 }
 @media (min-width : 1440px){

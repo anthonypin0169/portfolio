@@ -1,9 +1,12 @@
-import { useState } from "react"
-import Particle from "../../components/particles/particles.jsx"
+import { useState, lazy, Suspense } from "react"
 import Card from "../../components/cards/cards.jsx"
 import Carrousel from "../../components/carrousel/carrousel.jsx"
+import { IconAngleLeft, IconAngleRight } from "../../components/icons/icons.jsx"
 import schoolProjects from "../../data/schoolProjects.js"
 import "./home.scss"
+
+const Particle = lazy(() => import("../../components/particles/particles.jsx"))
+
 function Home () {
     const [selectedProjectId, setSelectedProjectId] = useState(null)
     const [screenState, setScreenState] = useState(0)
@@ -29,7 +32,9 @@ function Home () {
     return(
         <main>
             <section className="banner" >
-                <Particle />
+                <Suspense fallback={null}>
+                    <Particle />
+                </Suspense>
                 <h2 className="banner__h2 title">Anthony Pin</h2>
                 <h1 className="banner__h1 title">Développeur Front-end</h1>
                 <h3 className="banner__h3 title">Précis sur les détails, ambitieux sur les projets.</h3>
@@ -71,8 +76,8 @@ function Home () {
 
                         <div className="school-projects__modal--img-wrapper">
                             <img src={selectedProject?.picture[screenState]} alt={selectedProject?.alt} className="school-projects__modal--img" />
-                            <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                            <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                            <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                            <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                         </div>
 
                         <div className="school-projects__modal--improvements">

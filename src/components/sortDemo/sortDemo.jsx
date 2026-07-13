@@ -1,4 +1,5 @@
 import { useState, useRef } from "react"
+import { IconPlay } from "../icons/icons"
 import "./sortDemo.scss"
 
 function createShuffledArray(size) {
@@ -108,7 +109,7 @@ function SortDemo() {
             <h2 className="optimisation__h2">Optimisations et performances</h2>
 
             <button onClick={runComparison} className="optimisation__btn">
-                <i className="fa-solid fa-play"></i>
+                <IconPlay className="fa-play" />
             </button>
 
             <div className="optimisation__group">

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import schoolProjects from "../../data/schoolProjects"
+import { IconAngleLeft, IconAngleRight } from "../icons/icons"
 import "./carrousel.scss"
 function Carrousel () {
 
@@ -44,8 +45,8 @@ function Carrousel () {
                         className="carrousel__card--img"
                         />
                     </picture>
-                    <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                    <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                    <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                    <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                 </div>
             </article>
 
@@ -67,8 +68,8 @@ function Carrousel () {
                             <source srcSet={schoolProjects[carrouselState].picture[screenState]} type="image/avif" />
                             <img src={schoolProjects[carrouselState].picture[screenState]?.replace(".avif", ".png")} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
                         </picture>
-                        <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
-                        <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
+                        <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                        <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                     </div>
 
                     <div className="carrousel__modal--improvements">

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { increment } from "../../store/counterSlice"
 import SortDemo from "../../components/sortDemo/sortDemo"
+import { IconPlay } from "../../components/icons/icons"
 import "./careers.scss"
 
 function Careers () {
@@ -119,7 +120,7 @@ function Careers () {
                 <section className="js-event">
                     <h2 className="js-event__h2">DOM - Events JavaScript</h2>
                     <div className="js-event__group">
-                        <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"><i className="fa-solid fa-play"></i></button>
+                        <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"><IconPlay className="fa-play" /></button>
                         <div className="js-event__group--loader">
                             {Array.from({length: 20}, (_, i) => (
                                 <div 
