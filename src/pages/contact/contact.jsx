@@ -54,7 +54,7 @@ function Contact() {
                 </div>
             </form>
 
-            <h2>Contact par mail :</h2>
+            <h2 className="contact__sub-title">Contact par mail :</h2>
             <div className="email">
                 <div className="email__content">
                     <h4 className="email__content--h4">anthonypin0169@gmail.com</h4>
