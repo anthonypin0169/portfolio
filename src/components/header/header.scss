@@ -56,14 +56,16 @@
     width: 100%;
 }
 
-.header__icon.jump{
+.header__icon.open{
     position: relative;
     z-index: 3;
+}
+.header__icon.jump{
+    position: relative;
     animation: iconJump 600ms ease forwards;
 }
 .header__icon.land{
     position: relative;
-    z-index: 3;
     animation: iconLand 600ms ease backwards;
 }
 
@@ -158,12 +160,10 @@
 
     .header__icon.jump{
         position: relative;
-        z-index: 3;
         animation: iconJump 600ms ease forwards;
     }
     .header__icon.land{
         position: relative;
-        z-index: 3;
         animation: iconLand 600ms ease backwards;
     }
 }

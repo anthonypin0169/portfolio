@@ -298,7 +298,7 @@ $gradients: (
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 85%;
     margin: 20px 0;
     padding: 6px 0;
     border-radius: 7px;
@@ -316,7 +316,11 @@ $gradients: (
         }
     }
 }
-
+@media (min-width : 768px) {
+    .border{
+        width: 90%;
+    }
+}
 @media (min-width : 1024px) {
     .main{
         &__title{

@@ -94,7 +94,7 @@ function Home () {
                 <h3 className="school-projects__h3">Ces projets reflètent ma progression et ma capacité à livrer des interfaces fonctionnelles, structurées et pensées pour l'utilisateur.</h3>
             </section>
 
-            <section className="path">
+            <section className="path" id="parcours">
                 <h2 className="path__title">Parcours</h2>
                 <div className="path__sub-section">
                     <h3 className="path__sub-section--h3">Ma précédente situation :</h3>

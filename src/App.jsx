@@ -6,11 +6,14 @@ import LegalNotice from "./pages/legalNotice/legalNotice"
 import Projects from "./pages/projects/projects"
 import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
+import ScrollToHash from "./components/scrollToHash/scrollToHash"
 
 
 function App(){
+
     return(
         <BrowserRouter>
+            <ScrollToHash />
             <Header />
             <Routes>
                 <Route path = "/" element = {<Home />} />

@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     &__title{
-        
+        margin-left: 15px;
     }
     &__sub-title{
         margin-left: 15px;
@@ -121,6 +121,7 @@
         }
         &__title{
             margin-bottom: 5%;
+            margin-left: 0;
         }
         &__sub-title{
             margin-left: 5%;

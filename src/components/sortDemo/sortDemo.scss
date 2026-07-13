@@ -25,14 +25,14 @@
     &__group{
         width: 100%;
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        justify-content: center;    
+        gap: 5px;
     }
     &__container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 45%;
+        width: 40%;
         h3{
             text-align: center;
             min-height: 2.4em;
@@ -62,7 +62,22 @@
         border-radius: 1px 1px 0 0;
     }
 }
-
+@media (min-width : 768px) {
+    .optimisation{
+        &__group{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        }
+    }
+}
 @media (min-width : 1073px) {
     .optimisation{
         &__group{
