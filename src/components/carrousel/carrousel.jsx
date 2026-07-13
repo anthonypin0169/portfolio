@@ -36,11 +36,14 @@ function Carrousel () {
             <article onClick={() => setModalIsOpen(true)} className="carrousel__card">
                 <h2 className="carrousel__card--title">{schoolProjects[carrouselState].title}</h2>
                 <div className="carrousel__card--img-wrapper">
-                    <img
-                    src={schoolProjects[carrouselState].picture[0]}
-                    alt={schoolProjects[carrouselState].alt}
-                    className="carrousel__card--img"
-                    />
+                    <picture>
+                        <source srcSet={schoolProjects[carrouselState].picture[0]} type="image/avif" />
+                        <img
+                        src={schoolProjects[carrouselState].picture[0]?.replace(".avif", ".png")}
+                        alt={schoolProjects[carrouselState].alt}
+                        className="carrousel__card--img"
+                        />
+                    </picture>
                     <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
                     <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
                 </div>
@@ -60,7 +63,10 @@ function Carrousel () {
                     <p className="carrousel__modal--context">{schoolProjects[carrouselState].context}</p>
 
                     <div className="carrousel__modal--img-wrapper">
-                        <img src={schoolProjects[carrouselState].picture[screenState]} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
+                        <picture>
+                            <source srcSet={schoolProjects[carrouselState].picture[screenState]} type="image/avif" />
+                            <img src={schoolProjects[carrouselState].picture[screenState]?.replace(".avif", ".png")} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
+                        </picture>
                         <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><i className="fa-solid fa-angle-left"></i></button>
                         <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><i className="fa-solid fa-angle-right"></i></button>
                     </div>
@@ -73,8 +79,11 @@ function Carrousel () {
                     <div className="carrousel__modal--logo">
                         <h3 className="logo-text">Ce projet m'a permis de travailler avec :</h3>
                         {schoolProjects[carrouselState].logoTech.map((logo,index) => (
-                            <img key={index} src={logo} alt={schoolProjects[carrouselState].altLogoTech[index]} className="logo"/>
-                        ))} 
+                            <picture key={index}>
+                                <source srcSet={logo} type="image/avif" />
+                                <img src={logo?.replace(".avif", ".png")} alt={schoolProjects[carrouselState].altLogoTech[index]} className="logo"/>
+                            </picture>
+                        ))}
                     </div>
                     <h3 className="carrousel__modal--p">Pour en savoir plus sur le projet..</h3>
                     <p className="carrousel__modal--p">{schoolProjects[carrouselState].repository}</p>
