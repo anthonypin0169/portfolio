@@ -3,11 +3,14 @@ function Card ({text, className, contentClass, src, alt, imageClass, onClick}) {
     return(
         <div className={className} onClick={onClick}>
             <div className={contentClass}>{text}
-                <img
-                src={src}
-                alt={alt}
-                className={imageClass}
-                />
+                <picture>
+                    <source srcSet={src} type="image/avif" />
+                    <img
+                    src={src?.replace(".avif", ".png")}
+                    alt={alt}
+                    className={imageClass}
+                    />
+                </picture>
             </div>
             
         </div>

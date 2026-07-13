@@ -103,6 +103,32 @@
         }
     }
 }
+.testimony-and-graduation{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    &__title{
+        align-self: center;
+        margin-bottom: 30px;
+    }
+}
+.graduation{
+    &__card{
+        width: 60%;
+        height: 30vw;
+        background: linear-gradient(125deg, #b5bec7, #c9d1d9, #dde3e9, #ffffff);
+        padding: 5px;
+        border-radius: 8px;
+        align-self: center;
+        &--content{
+            background: #1a0a2e;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    }
+}
 
 @media (min-width : 400px) {
     .banner{
@@ -126,7 +152,7 @@
 }
 @media (min-width : 768px) {
     .path{
-        padding: 50px 0 150px 0;
+        padding: 50px 0 50px 0;
     }
 }
 @media (min-width : 1024px) {
@@ -366,4 +392,8 @@
             }
         }
     }
+    .testimony-and-graduation{
+        padding: 70px 0 120px 0;
+    }
+    
 }
