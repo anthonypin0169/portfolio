@@ -35,8 +35,8 @@ function Home () {
                 <Suspense fallback={null}>
                     <Particle />
                 </Suspense>
-                <h2 className="banner__h2 title">Anthony Pin</h2>
-                <h1 className="banner__h1 title">Développeur Front-end</h1>
+                <h1 className="banner__h2 title">Anthony Pin</h1>
+                <h2 className="banner__h1 title">Développeur Front-end</h2>
                 <h3 className="banner__h3 title">Précis sur les détails, ambitieux sur les projets.</h3>
             </section>
 
@@ -66,7 +66,7 @@ function Home () {
 
                 <div className={`overlay-projects ${selectedProjectId ? "hide" : "" }`} onClick={closeModal}>
                     <div className={`school-projects__modal ${selectedProjectId ? "open" : ""}`} onClick={(e) => e.stopPropagation()}>
-                        <button onClick={closeModal} className="school-projects__modal--close-btn">
+                        <button onClick={closeModal} aria-label="Fermer" className="school-projects__modal--close-btn">
                             <div className="close-btn-stick stick1"></div>
                             <div className="close-btn-stick stick2"></div>
                         </button>
@@ -76,8 +76,8 @@ function Home () {
 
                         <div className="school-projects__modal--img-wrapper">
                             <img src={selectedProject?.picture[screenState]} alt={selectedProject?.alt} className="school-projects__modal--img" />
-                            <button onClick={prevScreen} className="school-projects__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
-                            <button onClick={nextScreen} className="school-projects__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
+                            <button onClick={prevScreen} aria-label="Image précédente" className="school-projects__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                            <button onClick={nextScreen} aria-label="Image suivante" className="school-projects__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                         </div>
 
                         <div className="school-projects__modal--improvements">

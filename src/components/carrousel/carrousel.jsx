@@ -45,8 +45,8 @@ function Carrousel () {
                         className="carrousel__card--img"
                         />
                     </picture>
-                    <button onClick={(e) => { e.stopPropagation(); handlePrev(); }}  className="carrousel__card--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
-                    <button onClick={(e) => { e.stopPropagation(); handleNext(); }} className="carrousel__card--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
+                    <button onClick={(e) => { e.stopPropagation(); handlePrev(); }} aria-label="Projet précédent" className="carrousel__card--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                    <button onClick={(e) => { e.stopPropagation(); handleNext(); }} aria-label="Projet suivant" className="carrousel__card--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                 </div>
             </article>
 
@@ -55,7 +55,7 @@ function Carrousel () {
                 <div className={`carrousel__modal ${modalIsOpen ? "open" : "" }`} 
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <button onClick={() => setModalIsOpen(false)} className="carrousel__modal--close-btn">
+                    <button onClick={() => setModalIsOpen(false)} aria-label="Fermer" className="carrousel__modal--close-btn">
                         <div className="close-btn-stick stick1"></div>
                         <div className="close-btn-stick stick2"></div>
                     </button>
@@ -68,8 +68,8 @@ function Carrousel () {
                             <source srcSet={schoolProjects[carrouselState].picture[screenState]} type="image/avif" />
                             <img src={schoolProjects[carrouselState].picture[screenState]?.replace(".avif", ".png")} alt={schoolProjects[carrouselState].alt} className="carrousel__modal--img" />
                         </picture>
-                        <button onClick={prevScreen} className="carrousel__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
-                        <button onClick={nextScreen} className="carrousel__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
+                        <button onClick={prevScreen} aria-label="Image précédente" className="carrousel__modal--arrow left-btn"><IconAngleLeft className="fa-angle-left" /></button>
+                        <button onClick={nextScreen} aria-label="Image suivante" className="carrousel__modal--arrow right-btn"><IconAngleRight className="fa-angle-right" /></button>
                     </div>
 
                     <div className="carrousel__modal--improvements">

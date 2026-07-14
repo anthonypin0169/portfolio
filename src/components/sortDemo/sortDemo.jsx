@@ -108,7 +108,7 @@ function SortDemo() {
         <section className="optimisation">
             <h2 className="optimisation__h2">Optimisations et performances</h2>
 
-            <button onClick={runComparison} className="optimisation__btn">
+            <button onClick={runComparison} aria-label="Lancer la comparaison des tris" className="optimisation__btn">
                 <IconPlay className="fa-play" />
             </button>
 

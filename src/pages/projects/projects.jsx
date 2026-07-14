@@ -19,7 +19,7 @@ function Projects () {
                 <div className={`overlay ${modalIsOpen ? 'hide' : ''}`} onClick={() => setModalIsOpen(false)}>
                     <div className={`personnal-works__modal ${modalIsOpen ? "open" : "" }`} onClick={(e) => e.stopPropagation()}>
 
-                        <button onClick={() => setModalIsOpen(false)} className="personnal-works__modal--close-btn">
+                        <button onClick={() => setModalIsOpen(false)} aria-label="Fermer" className="personnal-works__modal--close-btn">
                             <div className="close-btn-stick stick1"></div>
                             <div className="close-btn-stick stick2"></div>
                         </button>

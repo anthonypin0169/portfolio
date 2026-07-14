@@ -120,7 +120,7 @@ function Careers () {
                 <section className="js-event">
                     <h2 className="js-event__h2">DOM - Events JavaScript</h2>
                     <div className="js-event__group">
-                        <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} className="js-event__group--btn"><IconPlay className="fa-play" /></button>
+                        <button onMouseDown={startPress} onMouseUp={stopPress} onMouseLeave={stopPress} onTouchStart={startPress} onTouchEnd={stopPress} aria-label="Maintenir appuyé pour charger la barre de progression" className="js-event__group--btn"><IconPlay className="fa-play" /></button>
                         <div className="js-event__group--loader">
                             {Array.from({length: 20}, (_, i) => (
                                 <div 
