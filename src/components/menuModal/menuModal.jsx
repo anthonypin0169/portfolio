@@ -16,7 +16,7 @@ function MenuModal ({isOpen, onClose}) {
 
                     <div className="header__menuModal--group-2">
                         <Nav text = "Mentions légales" redirection = "/mentions-legales" className = {`link link-grp2 ${isOpen ? 'slide-grp2' : ''}`}/>
-                        <p className = {`link link-grp2 ${isOpen ? 'slide-grp2' : ''}`}>Tous droits réservés</p>
+                        <h4 className = {`link link-grp2 ${isOpen ? 'slide-grp2' : ''}`}>Tous droits réservés</h4>
                     </div>
                 </nav>
             </div>

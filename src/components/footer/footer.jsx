@@ -16,7 +16,7 @@ function Footer () {
             
             <div className="footer__group group-3">
                 <Nav text = "Mentions légales" redirection = "/mentions-legales" className = "footer__group--link" />
-                <p className = "footer__group--link" >Tous droits réservés</p>
+                <h4 className = "footer__group--link" >Tous droits réservés</h4>
             </div>
         </footer>
     )
