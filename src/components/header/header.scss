@@ -136,34 +136,4 @@
             }
         }
     }
-    .header__nav--link::after{
-        content: "";
-        display: block;
-        width: 0px;
-        height: 2px;
-        background: $textes-v1;
-        margin: 3px auto 0 auto;
-        border-radius: 2px;
-        transition: width 0.2s ease-in-out;
-    }
-    .header__nav--link:hover::after{
-        width: 100%;
-        background: $textes-v1;  
-    }
-    .header__nav--link.active {
-        color: $textes-v2;
-    }
-    .header__nav--link.active::after {
-        color: $textes-v2;
-        width: 100%;
-    }
-
-    .header__icon.jump{
-        position: relative;
-        animation: iconJump 600ms ease forwards;
-    }
-    .header__icon.land{
-        position: relative;
-        animation: iconLand 600ms ease backwards;
-    }
 }

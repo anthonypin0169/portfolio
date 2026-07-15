@@ -102,17 +102,18 @@ li{
         overflow: hidden;
         border: 4px solid $cards;
         border-radius: 7px;
-        container-type: inline-size;
         display: grid;
         grid-template-columns: repeat(auto-fill, 30px);
         grid-template-rows: repeat(auto-fill, 30px);
     }
  &__input{
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin-top: 20px;
     display: flex;
     background: transparent;
-    &::-webkit-slider-thumb { 
+    &::-webkit-slider-thumb {
         -webkit-appearance: none;
         background: linear-gradient(125deg, #374151, #4b5563, #6b7280, #9ca3af);
         width: 16px;
@@ -120,8 +121,20 @@ li{
         border-radius: 50%;
         margin-top: -4px;
     }
-    &::-webkit-slider-runnable-track { 
-        background: linear-gradient(125deg, #6b7280, #9ca3af, #d1d5db, #f3f4f6); 
+    &::-moz-range-thumb {
+        background: linear-gradient(125deg, #374151, #4b5563, #6b7280, #9ca3af);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: none;
+    }
+    &::-webkit-slider-runnable-track {
+        background: linear-gradient(125deg, #6b7280, #9ca3af, #d1d5db, #f3f4f6);
+        height: 8px;
+        border-radius: 3px;
+    }
+    &::-moz-range-track {
+        background: linear-gradient(125deg, #6b7280, #9ca3af, #d1d5db, #f3f4f6);
         height: 8px;
         border-radius: 3px;
     }
@@ -416,22 +429,11 @@ $gradients: (
 @media (min-width : 1111px) {
     .react{
         &__container{
-            margin-bottom: 20px;
-            &--input{
-                width: 100px;
-                height: 60px;
-            }
             &--card{
                 width: 140px;
                 height: 204px;
             }
         }
-    }
-}
-@media (min-width : 1143px) {
-    .card{
-        width: 100px;
-        height: 150px;
     }
 }
 @media (min-width : 1440px) {

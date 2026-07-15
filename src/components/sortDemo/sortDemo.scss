@@ -65,16 +65,10 @@
 @media (min-width : 768px) {
     .optimisation{
         &__group{
-            width: 100%;
-            display: flex;
-            justify-content: center;
             gap: 20px;
         }
         &__container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 45%;
+            width: 45%;
         }
     }
 }

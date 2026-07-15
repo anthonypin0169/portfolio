@@ -35,20 +35,20 @@ function Contact() {
             <form action="" className="form" ref={formRef} onSubmit={handleSubmit}>
                 <div className="form__content">
                     <div className="form__content--input">
-                        <h4 className="form-h4">Nom :</h4>
-                        <input type="text" name="nom" required/>
+                        <label htmlFor="nom" className="form-h4">Nom :</label>
+                        <input type="text" id="nom" name="nom" required/>
                     </div>
                     <div className="form__content--input">
-                        <h4 className="form-h4">Prénom :</h4>
-                        <input type="text" name="prenom" required/>
+                        <label htmlFor="prenom" className="form-h4">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required/>
                     </div>
                     <div className="form__content--input">
-                        <h4 className="form-h4">Email :</h4>
-                        <input type="text" name="email" required/>
+                        <label htmlFor="email" className="form-h4">Email :</label>
+                        <input type="email" id="email" name="email" required/>
                     </div>
                     <div className="form__content--textarea">
-                        <h4 className="form-h4">Message :</h4>
-                        <textarea name="message" id="" required></textarea>
+                        <label htmlFor="message" className="form-h4">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
                     <button className="form__content--btn" disabled={isSending}>Envoyer</button>
                 </div>
