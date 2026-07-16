@@ -60,7 +60,7 @@
 .link-grp1.slide{
     animation: sliderLink 250ms ease forwards;
 
-    @for $i from 1 through 2 {
+    @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
             animation-delay: 250ms + $i * 100ms;
         }
