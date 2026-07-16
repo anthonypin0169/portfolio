@@ -47,7 +47,7 @@ function Contact() {
                         <input type="email" id="email" name="email" required/>
                     </div>
                     <div className="form__content--textarea">
-                        <label htmlFor="message" className="form-h4">Message :</label>
+                        <label htmlFor="message" className="form-h4 message-label">Message :</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     <button className="form__content--btn" disabled={isSending}>Envoyer</button>

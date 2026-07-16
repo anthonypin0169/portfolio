@@ -114,10 +114,14 @@ function Home () {
                      <Card className="path__sub-section--text" contentClass="path__sub-section--content" text = "Aujourd'hui ma perspective a changé, mon projet initial est devenu un projet personnel secondaire et j'ai développé un réel plaisir à construire des interfaces de qualité." />
                 </div>
             </section>
-            <section className="testimony-and-graduation">
-                <h2 className="testimony-and-graduation__title">Certificats</h2>
-                <Card className="graduation__card" contentClass="graduation__card--content" imageClass="graduation__card--img" alt="Open-classroom intégrateur web"/>
-            </section>
+            {/*
+                <section className="testimony-and-graduation">
+                    <h2 className="testimony-and-graduation__title">Certificats</h2>
+                    <Card className="graduation__card" contentClass="graduation__card--content" imageClass="graduation__card--img" alt="Open-classroom intégrateur web"/>
+                </section>
+            */}
+            
+            
         </main>
     )
 }

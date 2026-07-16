@@ -31,6 +31,28 @@ const schoolProjects = [
         context:"Cadrage complet d'un projet en méthode Agile : kanban Notion avec tickets chiffrés, veille technologique sur Feedly, présentation client et rédaction des spécifications techniques.",
         improvements:"Développer une partie de l'application qui mettrait à disposition un outil pour monter un site vitrine du restaurant, dans lequel on pourra inclure la carte précédemment créée.",
         repository:"https://difficult-toucan-1f4.notion.site/Kanban-Qwenta-36f9202c3e0880be9365d81c60ef440a"
+    },
+    {
+        id: 4,
+        title: "Ohmyfood",
+        picture: ["./images/Ohmyfood-1.avif","./images/Ohmyfood-2.avif","./images/Ohmyfood-3.avif"],
+        alt:"Photo du projet Ohmyfood",
+        logoTech:["./images/SassLogo.avif","./images/GithubLogo.avif"],
+        altLogoTech:["Logo de Sass","Logo de Github"],
+        context:"Site vitrine pour un service de commande de repas en ligne. Intégration HTML/SCSS en mobile-first avec animations CSS sur le parcours de commande.",
+        improvements:"Permettre de sélectionner des plats et de simuler la validation d'une commande.",
+        repository:"https://github.com/anthonypin0169/OpenClassroomsProject4"
+    },
+    {
+        id: 5,
+        title: "Nina Carducci",
+        picture: ["./images/Nina-1.avif","./images/Nina-2.avif","./images/Nina-3.avif"],
+        alt:"Photo du projet Nina Carducci",
+        logoTech:["./images/LightHouseLogo.avif","./images/WaveLogo.avif"],
+        altLogoTech:["Logo LightHouse","Logo de /Wave"],
+        context:"Optimisation d'un site vitrine existant : amélioration de l'accessibilité (balises sémantiques, contrastes, attributs alt), du référencement naturel et des performances, mesurées via un rapport Lighthouse.",
+        improvements:"Poursuivre l'optimisation des performances pour obtenir un score Lighthouse supérieur à 90 sur mobile.",
+        repository:"https://github.com/anthonypin0169/OpenClassroomsProject8"
     }
 ]
 
