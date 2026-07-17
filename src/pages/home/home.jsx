@@ -43,7 +43,7 @@ function Home () {
             <section className="introduction" id="a-propos">
                 <Card className="introduction__text" imageClass="introduction__img" contentClass="introduction__content" text = "Curieux et rigoureux, je m'intéresse autant à l'expérience utilisateur qu'à la qualité du code." />
                 <Card className="introduction__text" imageClass="introduction__img" contentClass="introduction__content" text = "J'aime créer des interfaces qui fonctionnent bien et qui se ressentent bien." />
-                <Card className="introduction__text" imageClass="introduction__img" contentClass="introduction__content" text = "Je cherche une équipe avec qui construire des choses qui comptent." />
+                <Card className="introduction__text" imageClass="introduction__img" contentClass="introduction__content" text = "Basé à Bourg-en-Bresse, ouvert au télétravail et aux missions à Lyon, je cherche une équipe avec qui construire des choses qui comptent." />
             </section>
 
             <section className="school-projects">
@@ -111,7 +111,7 @@ function Home () {
                 </div>
                 <div className="path__sub-section">
                     <h3 className="path__sub-section--h3">Ma situation actuelle :</h3>
-                     <Card className="path__sub-section--text" contentClass="path__sub-section--content" text = "Aujourd'hui ma perspective a changé, mon projet initial est devenu un projet personnel secondaire et j'ai développé un réel plaisir à construire des interfaces de qualité." />
+                     <Card className="path__sub-section--text" contentClass="path__sub-section--content" text = "Aujourd'hui ma perspective a changé, mon projet initial est devenu un projet personnel secondaire et j'ai développé un réel plaisir à construire des interfaces de qualité en React et JavaScript, avec l'ambition de devenir développeur front-end." />
                 </div>
             </section>
             {/*

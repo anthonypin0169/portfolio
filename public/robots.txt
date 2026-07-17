@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://portfolio-eight-chi-2hnog4gz7m.vercel.app/sitemap.xml
