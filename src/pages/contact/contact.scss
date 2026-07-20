@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: 2px 2px 5px $cards;
+    position: relative;
     &__content{
         display: flex;
         flex-direction: column;
@@ -58,6 +59,28 @@
           border-radius: 7px;
           font-weight: bold;
           box-shadow: 1.5px 1.5px 3px $accents-v2;
+        }
+    }
+    &__send-message{
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        width: 50%;
+        height: 35px;
+        border-radius: 8px;
+        background: $border-gradient;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            height: 85%;
+            border-radius: 8px;
+            background: $cards;
+            color: green;
         }
     }
 }
@@ -119,6 +142,9 @@
             height: 35px;
             font-size: 16px;
         }
+        &__send-message{
+            height: 40px;
+        }
     }
 }
 @media (min-width : 1440px) {
@@ -136,6 +162,9 @@
         input{
             height: 40px;
             font-size: 20px;
+        }
+        &__send-message{
+            height: 50px;
         }
     }
 }

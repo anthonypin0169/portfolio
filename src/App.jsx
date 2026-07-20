@@ -7,6 +7,7 @@ import Projects from "./pages/projects/projects"
 import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
 import ScrollToHash from "./components/scrollToHash/scrollToHash"
+import Error from "./pages/error/error"
 
 
 function App(){
@@ -21,6 +22,7 @@ function App(){
                 <Route path = "/competences" element = {<Careers />} />
                 <Route path = "/contact" element = {<Contact />} />
                 <Route path = "/mentions-legales" element = {<LegalNotice />} />
+                <Route path = "/*" element = {<Error />} />
             </Routes>
             <Footer />
         </BrowserRouter>

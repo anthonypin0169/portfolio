@@ -15,4 +15,89 @@ body h1 {
 
 body h2 {
   font-family: "JetBrains mono";
+}
+
+picture {
+  display: contents;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  label {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  label {
+    font-size: 22px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  label {
+    font-size: 26px;
+  }
+  p {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=index.css.map */

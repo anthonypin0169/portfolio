@@ -52,6 +52,11 @@ function Contact() {
                     </div>
                     <button className="form__content--btn" disabled={isSending}>Envoyer</button>
                 </div>
+                { isSending &&
+                    <div className="form__send-message">
+                        <p className="form__send-message--text">Message envoyé !</p>
+                    </div>
+                }
             </form>
 
             <h2 className="contact__sub-title">Contact par mail :</h2>
